@@ -24,4 +24,5 @@ Thumbs.db
 obj/
 _ReSharper*/
 *.opensdf
+*.tlog
 

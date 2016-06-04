@@ -40,11 +40,13 @@ void BGR2HSV(cv::Mat _rgb_img, cv::Mat & _h_img)
 	///定义H通道的图像，大小和RGB一样，单通道，全零
 	cv::Mat h_img = cv::Mat::zeros(_rgb_img.rows,_rgb_img.cols,CV_8UC1);
 
+	//#pragma omp parallel for num_threads(2)
 	for (int i = 0; i < _rgb_img.rows; ++i)
 	{
 		cv::Vec3b * pr = _rgb_img.ptr<cv::Vec3b>(i);
 		uchar * pr_h = h_img.ptr<uchar>(i);
 
+		//#pragma omp parallel for num_threads(2)
 		for (int j = 0; j < _rgb_img.cols; ++j)
 		{
 			int B = pr[j][0];

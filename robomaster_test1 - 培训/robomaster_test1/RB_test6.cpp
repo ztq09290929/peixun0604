@@ -91,6 +91,8 @@ int main()
 			///得到输入图像hsv通道的反投影图像result
 			result= finder.find(hsv,0.0f,180.0f,ch,1,maxbin);
 
+			cv::imshow("result", result);
+
 			///定义搜索终止条件
 			//TermCriteria criteria( CV_TERMCRIT_EPS | CV_TERMCRIT_ITER, 10, 1 );
 			/////开始CamShift查找
