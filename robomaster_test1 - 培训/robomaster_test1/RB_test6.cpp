@@ -113,7 +113,7 @@ int main()
 
 			ostringstream file_name;
 			file_name <<"result/"<< (++cnt) << ".jpg";
-			cv::imwrite(file_name.str(), frame(selection));
+			//cv::imwrite(file_name.str(), frame(selection));
 		}
 
 
